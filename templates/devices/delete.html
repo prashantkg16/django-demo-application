@@ -1,0 +1,12 @@
+<div class="row table-bordered bg-primary">
+	<div class="col-md-3">Hostname</div><div class="col-md-3">Sapid</div><div class="col-md-3">loopback</div><div class="col-md-3">&nbsp;</div>	
+</div>
+{% for iter_value in routerls.values %}
+<div class="row table-bordered ">
+	<div class="col-md-3">{{ iter_value.hostname }}</div>
+	<div class="col-md-3">{{ iter_value.sapid }}</div>
+	<div class="col-md-3">{{ iter_value.loopback }}</div>
+	<div class="col-md-3"><a href="/devices/editrouter/{{ iter_value.id }}" >Edit</a> | <a href="#" onclick="delrouter({{ iter_value.id }});" >Delete</a></div>	
+</div>
+{% endfor %}
+

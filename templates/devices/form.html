@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+{% block content %}	
+<div class="container">				
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Add Router</h3>
+		</div>
+	</div>
+</div>
+<div class="container">	
+	<div class="row">		
+		<div class="col-md-12">	
+		<form name="_routerform" method="post" action="addrouter">
+		{% csrf_token %}
+			{% if err %}
+			<div class="row form-group">
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-6 text-danger">{{ err }}</div>
+				<div class="col-md-4">&nbsp;</div>
+			</div>
+			{% endif %}
+			{% for field in form %}
+			<div class="row form-group">
+				<div class="col-md-2">{{ field.label_tag }}</div>
+				<div class="col-md-10">{{ field }}<span class="text-danger">&nbsp;{{ field.errors }}</span>  </div>				
+			</div>			
+			{% endfor %}
+			
+			<div class="row form-group">
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-2"><input type="submit" value="submit" class="btn btn-lg btn-success btn-block" /></div>
+				<div class="col-md-8">&nbsp;</div>
+			</div>
+		</form>	
+		</div>		
+	</div>	
+</div>	
+{% endblock content %} 

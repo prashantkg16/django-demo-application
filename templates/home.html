@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Demo App{% endblock title %}</title>
+	{% block head_favicon %}{% endblock head_favicon %}
+	{% block head_meta %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+	{% endblock head_meta %}
+
+	{% block head_css %}	
+		<!-- Block: COMMON CSS FILES -->
+		{% block head_css_site %}
+			<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		{% endblock head_css_site %}		
+		<!-- END Block: COMMON CSS FILES -->
+		
+		<!-- Block: PAGE SPECIFIC CSS FILES -->
+		{% block head_css_page %}
+		{% endblock head_css_page %}
+		<!-- END Block: PAGE SPECIFIC CSS -->
+	{% endblock head_css %}
+	
+	<!-- Block: COMMON JS FILES -->
+	{% block head_js %}
+		<script src="/static/jquery/jquery.min.js"></script>
+	{% endblock head_js %}
+	<!-- END Block: COMMON JS FILES -->
+	
+	<!-- Block: PAGE SPECIFIC JS FILES -->
+	{% block page_js %}{% endblock page_js %}
+	<!-- END Block: PAGE SPECIFIC JS FILES -->
+</head>
+<body>
+	{% block header %}
+	<div class="container">				
+        <div class="row text-center">
+			 <h1>Welcome to Demo App</h1>            
+        </div>
+    </div>
+	{% endblock header %}
+	{% block content %}	
+    <div class="container">				
+        <div class="row">
+            <div class="panel-body">Manage Device: <a href="/devices/index">Click Here</a></div>
+        </div>
+    </div>
+	{% endblock content %} 
+</body>
+</html>
