@@ -1,10 +1,8 @@
 "# django-demo-application" 
 
-This app contain simple CRUD operation with Ajax delete option(JQUERY)
-
-# Templates and Static data
 This app contain simple CRUD operation with soft(Ajax) delete option(JQUERY)
 
+"# Templates and Static data"
 For Template and Static file setting, Please check the link:
 http://prashantkumargupta.in/#/getdetails/3/Templates-and-Static-data
 
