@@ -5,7 +5,7 @@ This app contain simple CRUD operation with Ajax delete option(JQUERY)
 # Templates and Static data
 This app contain simple CRUD operation with soft(Ajax) delete option(JQUERY)
 
-For Template and Static file setting, Please check the below link:
+For Template and Static file setting, Please check the link:
 http://prashantkumargupta.in/#/getdetails/3/Templates-and-Static-data
 
 app Name - Devices
